@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "ProximaNova";
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ProximaNova";
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?-x1604k');
+    src:url('../fonts/icomoon.eot?#iefix-x1604k') format('embedded-opentype'),
+        url('../fonts/icomoon.woff?-x1604k') format('woff'),
+        url('../fonts/icomoon.ttf?-x1604k') format('truetype'),
+        url('../fonts/icomoon.svg?-x1604k#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-hs-01:before{content:"\e600";}
+.icon-hs-02:before{content:"\e601";}
+.icon-hs-03:before{content:"\e602";}
+.icon-hs-04:before{content:"\e603";}
+.icon-hs-05:before{content:"\e604";}
+.icon-hs-06:before{content:"\e60b";}
+.icon-hs-07:before{content:"\e607";}
+.icon-hs-08:before{content:"\e608";}
+.icon-hs-09:before{content:"\e60d";}
+.icon-hs-10:before{content:"\e60a";}
+.icon-hs-11:before{content:"\e609";}
+.icon-hs-12:before{content:"\e60c";}
+.icon-hs-13:before{content:"\e60f";}
+.icon-hs-14:before{content:"\e60e";}
+.icon-hs-15:before{content:"\e605";}
+.icon-hs-16:before{content:"\e606";}
+.icon-hs-left:before{content:"\e610";}
+.icon-hs-right:before{content:"\e611";}
+.icon-hs-close:before{content:"\e612";}
+.icon-hs-check:before{content:"\e613";}
+.icon-hs-play:before{content:"\e614";}
+.icon-hs-facebook:before{content:"\e615";}
+.icon-hs-twitter:before{content:"\e616";}
+.icon-hs-instagramm:before{content:"\e617";}
+.icon-hs-youtube:before{content:"\e618";}
