@@ -1,0 +1,7 @@
+node_modules/
+dest/
+archive/
+archive.zip
+sr_gridsite.pdf
+npm-debug.log
+index.php

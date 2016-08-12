@@ -1,0 +1,349 @@
+@import "includes/settings";
+
+body
+{
+	max-width: 1920px;
+}
+
+header
+{
+	display: flex;
+	justify-content: center;
+	background: $colorBackgroundHeader;
+}
+
+.wrap_Header
+{
+	width: $width;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.logo
+{
+	width: 290px;
+
+	display: flex;
+	align-items: center;
+	padding: 20px 0;
+}
+
+h1 
+{
+	font-size: $fontSize;
+	color: $colorTextLogo;
+	letter-spacing: 3px;
+	line-height: 18px;
+
+	background: url('/img/logo.jpg') no-repeat;
+	padding: 5px 0 5px 65px;
+}
+
+h1 strong
+{
+	font-size: $fontSize + 8;
+	font-weight: 700;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+
+.nav
+{
+	width: 860px;
+
+	display: flex;
+	justify-content: flex-end;
+}
+
+@media (max-width: 1150px)
+{
+	.nav
+	{
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+.nav ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.nav li
+{
+
+	font-size: $fontSize + 4;
+	margin: 5px 0;
+	padding: 0 10px;
+	color: $colorTextNav;
+
+	border-right: 1px solid $colorBorderNav;
+}
+
+ul li:last-child
+{
+	border-right: none;	
+}
+
+.nav li:hover
+{
+	cursor: pointer;
+
+	color: #ffffff;
+	background: $colorBackgroundNav;
+
+	border-radius: 5px;
+	box-shadow: 0 0 1px 2px $colorBorderNav;
+}
+
+// style section #1
+.image-section1
+{
+	height: 706px;
+	
+	background: url('/img/img1.jpg') no-repeat;
+
+	@include image-bg-section;
+}
+
+.section-bg1
+{
+	@include bg-layer2;
+
+	background: rgba(0,0,0,.5);
+}
+
+.arrow-section1-h2
+{
+	max-width: $width;
+	
+	display: flex;
+
+	color: $colorTextNav;
+
+	margin-top: 150px;
+}
+
+.arrow-section1-h2 .fa-reply
+{
+	@include arrow;
+
+	transform: rotate(-90deg);
+}
+
+.arrow-section1-h2 .fa-share
+{
+	@include arrow
+
+	transform: rotate(90deg);
+}
+
+.arrow-section1-h2 h2
+{
+	font-size: 4vw;
+	
+	text-align: center;
+	text-transform: uppercase;
+
+	background: #fff;
+
+	padding: 15px;
+	border-radius: 5px;
+}
+
+.arrow-section1-h2 h2 span
+{
+	color: $red;
+}
+
+.image-section1 ul
+{
+	display: flex;
+	flex-wrap: wrap;
+
+	background: #fff;
+	margin: 25px 0;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.image-section1 li
+{
+	font-size: 2.5vw;
+	color: $colorTextNav;
+	text-transform: uppercase;
+
+	margin: 10px 0;
+	padding: 0 10px;
+	border-right: 1px solid $colorBorderNav;
+}
+
+.image-section1 li:nth-child(3)
+{
+	color: $red;
+}
+
+.image-section1 li:last-child
+{
+	text-transform: none;
+}
+
+.arrow-section1-a
+{
+	margin-top: 50px;
+}
+
+.arrow-section1-a .fa-reply
+{
+	@include arrow
+
+	transform: rotate(-185deg);
+}
+
+.arrow-section1-a .fa-share
+{
+	@include arrow
+
+	transform: rotate(185deg);
+}
+
+.but-save-course
+{
+	font-size: $fontSize + 2;
+
+	text-transform: uppercase;
+
+	background: $red;
+	color: #fff;
+
+	padding: 10px 30px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+}
+
+
+@media (min-width: 1150px)
+{
+	.arrow-section1-h2 h2
+	{
+		font-size: 44px;
+	}
+
+	.image-section1 li
+	{
+		font-size: 26px;
+	}
+
+	.arrow-section1-h2 .fa-reply,
+	.arrow-section1-a .fa-reply,
+	.arrow-section1-h2 .fa-share,
+	.arrow-section1-a .fa-share		
+	{
+		font-size: 44px;
+	}
+}
+
+// style section #2
+.image-section2
+{
+	height: 577px;
+		
+	background: url('/img/img2.jpg') no-repeat;
+
+	@include image-bg-section;
+}
+
+.section2-bg
+{
+	@include bg-layer2;
+
+	background: rgba(255,255,255,.8);
+}
+
+.section2-bg h2
+{
+	@include h-section;
+}
+
+.study
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	margin-bottom: 60px;
+}
+
+.study p
+{	
+	width: 395px;
+
+	font-size: $fontSize - 2;
+	color: $colorTextNav;
+	margin: 10px;
+	padding: 10px;
+}
+
+.study strong
+{
+	text-transform: uppercase;
+	font-size: $fontSize + 2;
+}
+
+@media ( max-width: 875px)
+{
+	.section2-bg h2
+	{
+		margin-bottom: 30px;
+	}
+	.study
+	{
+		margin-bottom: 10px;
+	}
+
+	.study p
+	{	
+		margin: 5px;
+		padding: 5px;
+	}
+}
+
+// Style section #3
+.section3-bg
+{
+	@include bg-layer2;
+
+	padding-bottom: 50px;
+}
+
+.section3-bg h2
+{
+	@include h-section;
+
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.skill
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	margin-bottom: 60px;
+}
+
+.skill p
+{	
+	width: 395px;
+
+	font-size: $fontSize - 2;
+	color: $colorTextNav;
+	margin: 10px;
+	padding: 10px;
+}
