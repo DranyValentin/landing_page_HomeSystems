@@ -5,3 +5,5 @@ archive.zip
 sr_gridsite.pdf
 npm-debug.log
 index.php
+preload.php
+.gitignore

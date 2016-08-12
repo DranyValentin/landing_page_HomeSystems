@@ -1,0 +1,31 @@
+// reset default style
+body, header, main, footer, nav, aside, div, p, h1, h2, h3, figure, figcaption, a, ul, li
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: $fontSize;
+	font-family: 'Open Sans', Arial, Impact;
+	color: $color;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+{
+	display: block;
+}
+
+ul, li
+{
+	list-style: none;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+*
+{
+	box-sizing: border-box;
+}

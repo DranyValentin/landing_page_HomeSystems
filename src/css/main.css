@@ -1,8 +1,144 @@
+@import url("fonts.css");
+
+.container-fluid
+{
+	padding: 0;
+}
+
+
 .header
 {
 	max-width: 1200px;
 
-	background-color: orchid;
+	font-family: "ProximaNova";
 
 	margin: 0 auto;
+}
+
+.logo
+{
+	margin: 8px;
+}
+
+.phone,
+.feedback,
+.contacts
+{
+	/*width: 200px;*/
+	font-size: 18px;
+
+	text-align: right;
+}
+
+.feedback p
+{
+	display: inline-block;
+	width: 150px;
+
+	padding-right: 5px;
+	border: 1px solid #FF9E15;
+	border-radius: 10px;
+}
+
+.contacts
+{
+	text-transform: uppercase;
+}
+
+.nav_menu
+{	
+	background-color: #AEAEAE;
+}
+
+.header .nav li
+{
+	padding: 0 45px;
+}
+
+.header .nav li a
+{
+	font-size: 20px;
+
+	color: #FFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+/* Section1 */
+.section1
+{
+	width: 100%;
+	height: 800px;
+
+	display: flex;
+	align-items: center;
+	
+	background: url("../img/hs_showroom_poster.jpg") no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.wr_show_room
+{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.show_room
+{
+	/*display: inline-block;*/
+	font-size: 40px;	
+	color: #000;
+	text-align: center;
+	background-color: rgba(255,255,255,.9);
+align-content: center;
+
+	/*float: none;
+	vertical-align: middle;*/
+	/*margin-top: 10px;*/
+}
+
+
+
+
+
+/* Footer */
+.wr_footer
+{
+	background-color: #1D1D1B;
+}
+
+.footer
+{
+	max-width: 1200px;
+
+	margin: 0 auto;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.footer ul li a,
+.footer ul li
+{
+	font-size: 18px;
+	color: #fff;
+}
+
+.footer ul li
+{
+	padding: 5px;
+}
+
+.footer ul li a
+{
+	padding: 0;
+}
+
+
+.icon-hs-facebook
+{
+	font-size: 50px;
+	color: #EE7B0D;
+	background-color: #fff;
+
+	border-radius: 25px;
 }
