@@ -4,7 +4,7 @@
 {
 	padding: 0;
 }
-
+/* Header Section*/
 
 .header
 {
@@ -15,26 +15,43 @@
 	margin: 0 auto;
 }
 
-.logo
+.wr_logo_contacts /* Сenter the Block on the Vertical*/
 {
-	margin: 8px;
+	display: flex;
+	align-items: center;
+
+	margin: 0;
+}
+
+.image
+{
+	min-width: 295px;
+	margin: 8px auto;
 }
 
 .phone,
 .feedback,
 .contacts
 {
-	/*width: 200px;*/
+	min-width: 160px;
+	display: flex;
+	justify-content: flex-end;
+
 	font-size: 18px;
 
-	text-align: right;
+	padding: 0;
 }
+
+.phone p,
+.feedback p,
+.contacts p
+{
+	margin: 0;
+}
+
 
 .feedback p
 {
-	display: inline-block;
-	width: 150px;
-
 	padding-right: 5px;
 	border: 1px solid #FF9E15;
 	border-radius: 10px;
@@ -45,9 +62,12 @@
 	text-transform: uppercase;
 }
 
+/*Navigation menu*/
 .nav_menu
 {	
 	background-color: #AEAEAE;
+
+	margin: 0;
 }
 
 .header .nav li
@@ -63,6 +83,7 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+/*End Navigation Menu*/
 /* Section1 */
 .section1
 {
