@@ -92,13 +92,125 @@
 	background-color: rgba(255,255,255,.9);
 align-content: center;
 
-	/*float: none;
-	vertical-align: middle;*/
-	/*margin-top: 10px;*/
+/* Form */
+.wr_form
+{
+	max-width: 1200px;
+
+	margin: 0 auto 125px;
 }
 
+.wr_form form
+{
+	margin: 0 auto;
+}
 
+.wr_sect_form
+{
+	min-width: 365px;
+}
 
+form h2
+{
+	font-size: 30px;
+	color: #FF9E15;
+	text-align: center;
+	text-transform: uppercase;
+
+	margin-bottom: 0;
+}
+
+form .form-control,
+.bl_select_date,
+.bl_select_system
+{
+	max-width: 365px;
+	height: 45px;
+
+	font-size: 15px;
+
+	margin-top: 25px;
+	border: 1px solid #FF9E15;
+	border-radius: initial;
+}
+
+.bl_select_date,
+.bl_select_system
+{
+	display: flex;
+	align-items: center;
+}
+
+.bl_select_date p,
+.bl_select_system p
+{
+	font-size: 15px;
+	font-weight: 400;
+	color: #9D9D9C;
+	text-transform: uppercase;
+
+	margin: 0;
+	padding: 0;
+}
+
+.form-control.select_date_num,
+.form-control.select_date_month,
+.form-control.select_system
+{
+	width: 55px;
+	height: 15px;
+	
+	font-size: 8px;
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+	background-color: #9D9D9C;
+	border: none;
+}
+
+.form-control.select_system
+{
+	width: 85px;
+
+	text-transform: uppercase;
+}
+
+.sel1,
+.sel2
+{
+	margin: 0;
+	padding: 0;
+}
+
+.sel2
+{
+	margin: 10px;
+}
+
+form .btn
+{
+	height: 45px;
+
+	font-size: 16px;
+	color: #FFF;
+	text-transform: uppercase;
+
+	background-color: #FF9E15;
+	margin-top: 25px;
+	border-color: #FF9E15;
+	border-radius: initial;
+}
+
+form p
+{
+	font-size: 12px;
+	font-weight: 600;
+
+	padding-top: 15px;
+	padding-left: 20px;
+}
+
+/*End Form*/
 
 
 /* Footer */
