@@ -26,7 +26,15 @@
 .image
 {
 	min-width: 295px;
-	margin: 8px auto;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.wr_phone_feedback_contacts
+{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .phone,
@@ -49,10 +57,9 @@
 	margin: 0;
 }
 
-
 .feedback p
 {
-	padding-right: 5px;
+	padding: 3px;
 	border: 1px solid #FF9E15;
 	border-radius: 10px;
 }
@@ -70,9 +77,11 @@
 	margin: 0;
 }
 
-.header .nav li
+.header .nav
 {
-	padding: 0 45px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .header .nav li a

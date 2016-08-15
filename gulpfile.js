@@ -45,6 +45,10 @@ gulp.task('scss', function ()
 gulp.task('css', function ()
 {
 	gulp.src('src/css/*.css')
+	.pipe(autoprefixer({
+			browsers: ['last 15 versions'],
+			cascade: false
+		}))
 	.pipe(gulp.dest('dest/css/'))
 	.pipe(connect.reload())
 
