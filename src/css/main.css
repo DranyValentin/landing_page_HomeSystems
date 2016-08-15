@@ -83,6 +83,12 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
+.header .nav li a:hover
+{
+	color: #FF9E15;
+	background-color: transparent;
+}
 /*End Navigation Menu*/
 /* End Header Section*/
 
@@ -274,6 +280,12 @@ form p
 .footer ul li a
 {
 	padding: 0;
+}
+
+.footer ul li a:hover
+{
+	color: #FF9E15;
+	background-color: transparent;
 }
 
 
