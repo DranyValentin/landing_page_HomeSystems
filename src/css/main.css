@@ -245,8 +245,14 @@ form p
 	max-width: 1200px;
 
 	margin: 0 auto;
-	padding-top: 100px;
+	padding: 100px;
 	padding-bottom: 100px;
+
+}
+
+.footer address
+{
+	padding: 0;
 }
 
 .footer ul li a,
@@ -274,4 +280,11 @@ form p
 	background-color: #fff;
 
 	border-radius: 25px;
+}
+
+.wr_nav1,
+.wr_nav2,
+.wr_nav3
+{
+	min-width:155px; 
 }
