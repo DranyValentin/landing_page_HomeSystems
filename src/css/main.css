@@ -4,8 +4,8 @@
 {
 	padding: 0;
 }
-/* Header Section*/
 
+/* Header Section*/
 .header
 {
 	max-width: 1200px;
@@ -84,6 +84,9 @@
 	padding-bottom: 5px;
 }
 /*End Navigation Menu*/
+/* End Header Section*/
+
+
 /* Section1 */
 .section1
 {
@@ -106,12 +109,13 @@
 
 .show_room
 {
-	/*display: inline-block;*/
 	font-size: 40px;	
 	color: #000;
 	text-align: center;
 	background-color: rgba(255,255,255,.9);
-align-content: center;
+	align-content: center;
+}
+/*End Section1*/
 
 /* Form */
 .wr_form
