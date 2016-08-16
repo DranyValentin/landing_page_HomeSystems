@@ -353,6 +353,11 @@ form p
 	background-color: transparent;
 }
 
+.footer ul li a:link
+{
+	background-color: transparent;
+}
+
 
 .icon-hs-facebook
 {
