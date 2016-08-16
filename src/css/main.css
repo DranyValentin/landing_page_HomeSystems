@@ -50,12 +50,20 @@
 	padding: 0;
 }
 
-/*.phone a,
+.phone a,
 .feedback a,
 .contacts a
 {
-	margin: 0;
-}*/
+	color: #000;
+}
+
+.phone a:hover,
+.feedback a:hover,
+.contacts a:hover
+{
+	color: #FF9E15;
+	text-decoration: none;
+}
 
 .feedback a
 {
