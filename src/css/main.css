@@ -456,3 +456,104 @@ form p
 		padding-bottom: 10px;
 	}
 }
+
+
+/* Modal form */
+.modal-backdrop {
+	opacity:0.5 !important;
+}
+
+#call-back-form h3 {
+	margin-left: 10px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#call-back-form p {
+	
+	font-size: 16px;
+	
+}
+
+#call-back-form .modal-body {
+	padding: 25px;
+}
+
+#call-back-form input {
+	height: 40px;
+	width: 100%;
+	
+}
+
+#call-back-form textarea {
+	height: 100px;
+	width: 100%;
+}
+
+#call-back-form .call-time {
+	margin-top: 30px;
+	display: inline-block;
+}
+
+#call-back-form input[type=radio]
+{
+	display: none;
+}
+
+#call-back-form label {
+
+	font-weight: normal;
+}
+
+#call-back-form label:after {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 20px 0 10px;
+	position: relative;
+	border: 1px solid #cdcdcd;
+	border-radius: 10px;
+	vertical-align: bottom;
+}
+
+#call-back-form input[type=radio]:checked + label::after {
+	content: "\2022";
+	color: #ff9e15;
+	font-size: 40px;
+	text-align: center;
+	line-height: 13px;
+}
+
+#call-back-form .conf-mini-button {
+	padding: 10px 60px;
+}
+
+#call-back-form .input-highlight {
+	outline: none;
+	border-color: red;
+	border-width: 1px;
+	box-shadow: 0 0 10px red;
+}
+
+.call-time
+{
+	font-size: 16px;
+}
+
+.conf-mini-button {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    padding: 20px 35px;
+    background-color: #ff9e15;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#custom-alert-text
+{
+	font-size: 16px;
+	padding: 20px;
+}

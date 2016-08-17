@@ -145,4 +145,65 @@
 			
 		</footer>
 	</div>
+
+<!--Modal Form-->
+	<div id="call-back-form" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" style="margin:5px 10px;"><span class="glyphicon glyphicon-remove-circle"></span></button>
+					<h3 class="modal-title">Обратный звонок</h3>
+				</div>
+				<div class="modal-body">
+					<form method="post" action="" id="callbackform">
+						<div class="row">
+							<div class="col-sm-6">
+								<p>Ваше имя:</p>
+									<input name="name" type="text" id="callbackname" onchange="checkInput(this)">
+							</div>
+							<div class="col-sm-6">
+								<p>Ваш телефон:</p>
+									<input name="phone" type="tel" id="callbacktel" onchange="checkInput(this)">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<p style="margin-top: 30px;">Комментарий:</p>
+								<textarea name="text" id="callbacktext"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 call-time">
+								<span style="margin-right: 30px;">Время для звонка:</span>
+								<div style="display:inline-block">
+									<input type="radio" id="radio-morning" name="call-time" value="morning">
+									<label class="mini-conf-radio-label" for="radio-morning">Утро</label>
+									<input type="radio" id="radio-day" name="call-time" value="day" checked>
+									<label class="mini-conf-radio-label" for="radio-day">День</label>
+									<input type="radio" id="radio-evening" name="call-time" value="evening">
+									<label class="mini-conf-radio-label" for="radio-evening">Вечер</label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="conf-mini-button" style="margin: 30px 0 30px 30px" onclick="validateCallBackForm()">
+					<div>Позвоните мне</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="custom-alert-modal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content clearfix">
+				<div class="modal-body">
+					<p id="custom-alert-text">Спасибо за Ваш запрос, наш менеджер свяжется с Вами в ближайшее время.</p>
+					<div class="conf-mini-button pull-right" style="margin: 30px 0 15px 30px; padding: 10px 60px" data-dismiss="modal">
+						<div>OK</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- End Modal Form-->
 </html>
