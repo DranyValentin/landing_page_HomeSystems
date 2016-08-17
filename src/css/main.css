@@ -1,5 +1,10 @@
 @import url("fonts.css");
 
+body
+{
+		font-family: "ProximaNova";
+}
+
 .container-fluid
 {
 	min-width: 360px;
@@ -11,7 +16,7 @@
 {
 	max-width: 1200px;
 
-	font-family: "ProximaNova";
+	/*font-family: "ProximaNova";*/
 
 	margin: 0 auto;
 }
@@ -62,6 +67,14 @@
 .contacts a:hover
 {
 	color: #FF9E15;
+	text-decoration: none;
+}
+
+.phone a:link,
+.feedback a:link,
+.contacts a:link
+{
+	color: #000;
 	text-decoration: none;
 }
 
@@ -189,6 +202,56 @@
 }
 /*End Section1*/
 
+/*Section Events*/
+.section_events
+{
+	max-width: 1200px;
+	margin: 60px auto 80px;
+}
+
+.section_events .row
+{
+	margin: 0;
+}
+
+.wr_bl_events
+{
+	display: flex;
+}
+
+.section_events h2
+{
+	font-size: 33px;
+	color: #FF9E15;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.arrow
+{
+	margin: auto;
+}
+
+.section_events p
+{
+	font-size: 19px;
+	font-weight: 400;
+}
+
+.section_events p a
+{
+	color: #FF9E15;
+}
+
+.section_events p a:hover,
+.section_events p a:link
+{
+	text-decoration: none;
+}
+
+/*End Section Events*/
+
 /* Form */
 .wr_form
 {
@@ -265,6 +328,11 @@ form .form-control,
 	width: 85px;
 
 	text-transform: uppercase;
+}
+
+.select_system option
+{
+	font-size: 10px;
 }
 
 .sel1,
@@ -367,96 +435,7 @@ form .btn
 
 	border-radius: 25px;
 }
-
-/* Media requests */
-@media (max-width: 768px)
-{
-	.wr_phone_feedback_contacts
-	{
-		display: flex;
-		align-items: flex-end;
-		flex-direction: column;
-	}
-
-	.phone
-	{
-		margin-right: 15px;
-	}
-
-	.feedback,
-	.contacts,
-	.nav_menu
-	{
-		display: none;
-	}
-
-
-	.menu_mobile
-	{
-		display: flex;
-	}
-
-	.show_room
-	{
-		font-size: 32px
-	}
-
-	.wr_sect_form,
-	.bl_name,
-	.bl_tel,
-	.bl_email,
-	.bl_select_date,
-	.bl_select_system
-	{
-		padding-right: 0;
-	}
-
-	.bl_name,
-	.bl_tel,
-	.bl_email
-	{
-		padding-left: 0;
-	}
-
-	.footer ul li a,
-	.footer ul li
-	{
-		font-size: 14px;
-		color: #fff;
-	}
-}
-
-@media (max-width:480px)
-{
-	.phone
-	{
-		display: none;
-	}
-
-	.show_room
-	{
-		font-size: 24px;
-	}
-
-	form h2
-	{
-		font-size: 28px;	
-	}
-
-	.footer
-	{
-		flex-direction: column;
-	}
-
-	.wr_nav1,
-	.wr_nav2,
-	.wr_nav3
-	{
-		width:100%;
-		padding-bottom: 10px;
-	}
-}
-
+/*End Footer*/
 
 /* Modal form */
 .modal-backdrop {
@@ -557,3 +536,116 @@ form .btn
 	font-size: 16px;
 	padding: 20px;
 }
+/*End Modal Form*/
+
+/* Media requests */
+@media (max-width: 768px)
+{
+	.wr_phone_feedback_contacts
+	{
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+	}
+
+	.phone
+	{
+		margin-right: 15px;
+	}
+
+	.feedback,
+	.contacts,
+	.nav_menu
+	{
+		display: none;
+	}
+
+
+	.menu_mobile
+	{
+		display: flex;
+	}
+
+	.show_room
+	{
+		font-size: 32px
+	}
+
+	.section_events
+	{
+		max-width: 1200px;
+		margin: 0 auto 80px;
+	}
+
+	.wr_sect_form,
+	.bl_name,
+	.bl_tel,
+	.bl_email,
+	.bl_select_date,
+	.bl_select_system
+	{
+		padding-right: 0;
+	}
+
+	.bl_name,
+	.bl_tel,
+	.bl_email
+	{
+		padding-left: 0;
+	}
+
+	.footer ul li a,
+	.footer ul li
+	{
+		font-size: 14px;
+		color: #fff;
+	}
+}
+
+@media (max-width:480px)
+{
+	.phone
+	{
+		display: none;
+	}
+
+	.show_room
+	{
+		font-size: 24px;
+	}
+
+	.img_events
+	{
+		display: none;
+	}
+
+	.section_events h2
+	{
+		font-size: 28px;
+	}
+
+	.text_events p
+	{
+		font-size: 14px;
+	}
+
+	form h2
+	{
+		font-size: 28px;	
+	}
+
+	.footer
+	{
+		flex-direction: column;
+	}
+
+	.wr_nav1,
+	.wr_nav2,
+	.wr_nav3
+	{
+		width:100%;
+		padding-bottom: 10px;
+	}
+}
+
+
