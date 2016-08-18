@@ -219,6 +219,13 @@ body
 	display: flex;
 }
 
+.wr_events
+{
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
 .section_events h2
 {
 	font-size: 33px;
@@ -230,22 +237,44 @@ body
 
 .arrow
 {
-	margin: auto;
+	margin: auto 0;
 }
 
-.section_events p
+.arrow_right:hover,
+.arrow_left:hover
+{
+	cursor: pointer;
+}
+
+.img_events img
+{
+	/*border: 1px solid orange;*/
+	border-radius: 5px;
+}
+
+.text_events h3
+{
+	font-size: 22px;
+	
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.text_events p
 {
 	font-size: 19px;
 	font-weight: 400;
 }
 
-.section_events p a
+.text_events p a
 {
 	color: #FF9E15;
 }
 
-.section_events p a:hover,
-.section_events p a:link
+.text_events p a:hover,
+.text_events p a:link
 {
 	text-decoration: none;
 }
@@ -574,7 +603,7 @@ form .btn
 	.section_events
 	{
 		max-width: 1200px;
-		margin: 0 auto 80px;
+		margin: 0 auto 40px;
 	}
 
 	.wr_sect_form,
@@ -614,6 +643,11 @@ form .btn
 		font-size: 24px;
 	}
 
+	.arrow_right
+	{
+		padding-right: 48px;
+	}
+
 	.img_events
 	{
 		display: none;
@@ -622,6 +656,19 @@ form .btn
 	.section_events h2
 	{
 		font-size: 28px;
+	}
+
+	.text_events
+	{
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		padding-left: 30px;
+	}
+
+	.text_events h3
+	{
+		font-size: 18px;
 	}
 
 	.text_events p
