@@ -2,7 +2,7 @@
 {
 	"use strict"
 
-	console.log("Run file 'index.js'")
+	console.log("Run file 'setdate.js'")
 
 //Set Date
 	var currentDate = new Date()
@@ -15,6 +15,7 @@
 
 	function setDays(firstDay, firstMonth){
 		var $opt = document.createElement('option')
+		$opt.value = ''
 		$opt.text = 'ЧИСЛО'
 		$selectDate.appendChild($opt)
 
