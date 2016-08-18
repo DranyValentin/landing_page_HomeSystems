@@ -14,7 +14,7 @@
 			jQuery('#custom-alert-modal').modal('show');
 		}, 500)
 	
-	   AjaxFormRequest('messegeResult', 'callbackform', '/wp-content/plugins/hs-configurer/callback.php')
+	   AjaxFormRequest('messegeResult', 'callbackform', '../callback.php')
 	   //document.getElementById('callbackform').submit();
 	}
 
@@ -29,6 +29,7 @@
 	        dataType: "html",
 	        data: jQuery("#"+formMain).serialize(),
 	        success: function(response) {
+			console.log(response)
 	            //document.getElementById(result_id).innerHTML = response;
 	        },
 	        error: function(response) {
@@ -42,3 +43,12 @@
 	    .removeAttr('checked')
 	    .removeAttr('selected');
 	}
+
+var $button = document.querySelector('.btn_save_room')
+
+
+$button.addEventListener('', function(event)
+{
+	AjaxFormRequest('messegeResult', 'form', '../callback.php')
+	event.preventDefault()
+})
