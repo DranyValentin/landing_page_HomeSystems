@@ -32,8 +32,8 @@
 		<div class="row nav_menu">
 			<nav class="col-xs-10 col-xs-offset-1">
 				<ul class="nav nav-pills">
-					<li><a href="#form">Посетить</a>
-					<li><a href="#events">Мероприятия</a>
+					<li><a href="#user" id="down">Посетить</a>
+					<li><a href="#events" id="down1">Мероприятия</a>
 					<li><a href="#">О шоу-руме</a>
 					<li><a href="http://homesystems.com.ua/o-nas/" target="_blank">О компании</a>
 				</ul>
@@ -92,11 +92,12 @@
 		</div>
 		<div class="col-xs-12 wr_bl_events">
 			<div class="col-xs-1 arrow arrow_left"><img src="img/arrow_left.svg"></div>
+			<div class="col-xs-10 wr_events">
 			<?php 
 			for ($i = 0; $i < count($posts); $i++) {
 				// print_var($i);
-				if ($i > 0) $class = ' hidden'; else $class = ''; ?>
-				<div class="col-xs-10 wr_events<?php echo $class; ?>" id="slide<?php echo $i; ?>">
+				if ($i > 0) $class = ' hidden_event'; else $class = ' current_event'; ?>
+				<div class="col-xs-12 event<?php echo $class; ?>" id="slide<?php echo $i; ?>">
 					<div class="col-xs-4 img_events"><img src="<?php echo get_the_post_thumbnail_url($posts[$i]); ?>" class="img-responsive" style="border: 1px solid orange"></div>
 					<div class="col-xs-8 text_events">
 						<h3><?php echo get_the_title($posts[$i]->ID); ?></h3>
@@ -105,6 +106,7 @@
 				</div>
 			</div>
 			<?php } ?>
+			</div>
 			<div class="col-xs-1 arrow arrow_right"><img src="img/arrow_right.svg"></div>
 		</div>
 	</div>
@@ -114,7 +116,7 @@
 	<div class="row wr_form">
 		<form id="form" method="post" action="">
 			<input type="hidden" name="formname" value="register">
-			<h2>Запишитесь на посещение<br>Шоу-Рума!</h2>
+			<h2 id="user">Запишитесь на посещение<br>Шоу-Рума!</h2>
 			<div class="col-xs-12 
 						col-sm-5 col-sm-offset-1 wr_sect_form">
 				<div class="form-group">
@@ -273,10 +275,51 @@
 <!-- End Modal Form-->
 
 
-<!-- <script>
+<script>
 jQuery(document).ready(function() {
 	jQuery('.system-article').addClass('clearfix');
 });
-</script> -->
+
+</script>
+
+<script defer>
+	var $body = document.querySelector('body')
+	var down = document.querySelector('#down')
+	var down1 = document.querySelector('#down1')
+
+	down.addEventListener('click',function(event)
+	{
+
+	 	var interval = setInterval(function()
+	 	{
+	 		 var id  = event.target.getAttribute('href'),
+	             top = document.querySelector(id).offsetTop
+
+	 		$body.scrollTop += 20
+
+	 		if ( $body.scrollTop > top )
+	 			clearInterval(interval)
+	 	}, 1)
+
+	 	event.preventDefault();
+	 })
+
+	down1.addEventListener('click',function(event)
+	{
+	 	var interval = setInterval(function()
+	 	{
+	 		 var id  = event.target.getAttribute('href'),
+	             top = document.querySelector(id).offsetTop
+
+	 		$body.scrollTop += 20
+
+	 		if ( $body.scrollTop > top )
+	 			clearInterval(interval)
+	 	}, 1)
+
+	 	event.preventDefault();
+	 })
+
+</script>
 </body>
 </html>

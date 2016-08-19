@@ -221,9 +221,45 @@ body
 
 .wr_events
 {
+	position: relative;
+	overflow: hidden;
+}
+
+.event
+{
+
 	display: flex;
 	margin: 0;
 	padding: 0;
+}
+
+.event.current_event
+{
+	left: 0;
+	transition: left 3s;
+}
+
+.event.hidden_event
+{
+	position: absolute;
+	left: 100%;
+	
+	transition: left 3s;
+}
+
+.event.animate
+{
+	left: 0;
+}
+
+.event.current_animate
+{
+	left: -100%;
+}
+
+.opacity_zero
+{
+	opacity: 0;
 }
 
 .section_events h2
