@@ -83,4 +83,99 @@
 			
 		}
 	})
+/* End Set Date */
+
+// Open Select Systems
+	var $boxSystems = document.querySelector('.select_system_caption')
+
+	$boxSystems.addEventListener('click', function(event)
+	{
+		var target = event.target
+		var listSystems = target.nextElementSibling
+
+		if ( listSystems.classList.contains('hidden') )
+			listSystems.classList.remove('hidden')
+		else
+			listSystems.classList.add('hidden')
+	})
+
+// Change color text when move on checkbox
+// And
+// Add Choice System in Box_System_Caption
+	var $checkboxSystems = document.querySelectorAll('.checkbox_system')
+	console.log($checkboxSystems)
+	var memSystemCaption = $boxSystems.textContent,
+		textSystemCaption,
+		currentSystemCaption,
+		countCheckedSystem = 0,
+		keyText = true
+
+	var	arrCaptions = []
+
+	Array.from($checkboxSystems).forEach(function($checkboxSystem)
+	{
+		console.log($checkboxSystem)
+
+		$checkboxSystem.addEventListener('mouseover', function(event)
+		{
+			console.log(event.target.nextElementSibling)
+			event.target.nextElementSibling.classList.add('text_orange')
+		})
+
+		$checkboxSystem.addEventListener('mouseout', function(event)
+		{
+			event.target.nextElementSibling.classList.remove('text_orange')
+		})
+
+		$checkboxSystem.addEventListener('click', function()
+		{
+			var target = event.target
+			
+			console.log(memSystemCaption)
+			console.log(target.value)
+
+			if ( target.checked )
+			{
+				arrCaptions[countCheckedSystem] = target.value
+				countCheckedSystem++
+			}
+			else
+			{	
+				console.log("Нет выбора")
+				for ( var i = 0; i < arrCaptions.length; i++)
+				{
+					console.log(arrCaptions[i])
+					console.log(target.value)
+					if ( arrCaptions[i] == target.value )
+					{
+						arrCaptions.splice(i,1)
+					}
+				}
+
+				countCheckedSystem--
+			}
+
+			console.log(arrCaptions)
+
+			if ( arrCaptions.length > 1 )
+			{
+				$boxSystems.textContent = arrCaptions[0] + ' ...'	
+			}
+			
+			if ( arrCaptions.length == 1 )
+			{
+				$boxSystems.textContent = arrCaptions[0]
+			}
+
+			if ( arrCaptions.length == 0 )
+			{
+				$boxSystems.textContent = memSystemCaption
+			}
+		})
+
+	})
+
+
+	
+
 })()

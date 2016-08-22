@@ -13,7 +13,7 @@
 	<script src="js/modalform.js" defer></script>
 	<!-- <script src="js/slider.js" defer></script> -->
 
-	<div class="container-fluid">
+<!-- 	<div class="container-fluid">
 		<header class="header">
 			<div class="row wr_logo_contacts">
 				<div class="col-xs-8 col-sm-3 image"><a href="localhost:8080">
@@ -86,7 +86,7 @@
 				<div class="col-xs-1 arrow arrow_right"><a class="right carousel-control" href="#carousel_events" role="button" data-slide="next"><img src="img/arrow_right.svg"></a></div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="container-fluid">
 		<div class="row wr_form">
@@ -130,7 +130,25 @@
 					<div class="col-xs-12 bl_select_system">
 						<p class="col-xs-6">Выберите систему</p>
 						<div class="col-xs-2 col-xs-push-1 sel3">
-							<select class="form-control select_system" required>
+							<div class="select_system_caption">Выбор не сделан<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></div>
+							<ul class="select_system hidden">
+								<li><input class="checkbox_system" type="checkbox" value="Домашняя автоматизация"><p>Домашняя автоматизация</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Управление освещением"><p>Управление освещением</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Климат-контроль"><p>Климат-контроль</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Интернет и Wi-Fi"><p>Интернет и Wi-Fi</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Домашнее аудио"><p>Домашнее аудио</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Видео и мультимедиа"><p>Видео и мультимедиа</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Телевидение"><p>Телевидение</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Системы Hi-End Stereo"><p>Системы Hi-End Stereo</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Видеонаблюдение"><p>Видеонаблюдение</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Охранная сигнализация"><p>Охранная сигнализация</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Отопление"><p>Отопление</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Энергоэффективность"><p>Энергоэффективность</p></li>
+								<li><input class="checkbox_system"type="checkbox" value="Современная электрика"><p>Современная электрика</p></li>
+							</ul>
+
+
+							<!-- <select class="form-control select_system" required>
 								<option value="1">Домашняя автоматизация</option>
 								<option value="2">Управление освещением</option>
 								<option value="3">Климат-контроль</option>
@@ -144,7 +162,7 @@
 								<option value="11">Отопление</option>
 								<option value="12">Энергоэффективность</option>
 								<option value="13">Современная электрика</option>
-							</select>
+							</select> -->
 						</div>
 					</div>
 					<div class="col-xs-12">
