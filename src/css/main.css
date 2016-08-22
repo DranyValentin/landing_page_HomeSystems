@@ -310,6 +310,12 @@ form h2
 	margin-bottom: 0;
 }
 
+form .error_input
+{
+	border: 1px solid red;
+	box-shadow: 0 0 6px red;
+}
+
 form .form-control,
 .bl_select_date,
 .bl_select_system
