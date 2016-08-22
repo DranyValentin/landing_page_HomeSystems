@@ -9,9 +9,10 @@
 	<script src="js/jquery-3.1.0.min.js" defer></script>
 	<script src="js/bootstrap.js" defer></script>
 	<script src="js/setdate.js" defer></script>
+	<script src="js/scrolldown.js" defer></script>
 	<script src="js/menu.js" defer></script>
 	<script src="js/modalform.js" defer></script>
-	<script src="js/slider.js" defer></script>
+<!-- 	<script src="js/slider.js" defer></script> -->
 </head>
 <body>
 <div class="container-fluid">
@@ -90,15 +91,15 @@
 		<div class="col-xs-12">
 			<h2>Анонсы мероприятий</h2>
 		</div>
-		<div class="col-xs-12 wr_bl_events">
-			<div class="col-xs-1 arrow arrow_left"><img src="img/arrow_left.svg"></div>
-			<div class="col-xs-10 wr_events">
+		<div id="carousel_events" class="col-xs-12 wr_bl_events carousel slide" data-ride="carousel">
+			<div class="col-xs-1 arrow arrow_left"><a class="left carousel-control" href="#carousel_events" role="button" data-slide="prev"><img src="img/arrow_left.svg"></a></div>
+			<div class="col-xs-10 wr_events carousel-inner" role="listbox">
 			<?php 
 			for ($i = 0; $i < count($posts); $i++) {
 				// print_var($i);
-				if ($i > 0) $class = ' hidden_event'; else $class = ' current_event'; ?>
-				<div class="col-xs-12 event<?php echo $class; ?>" id="slide<?php echo $i; ?>">
-					<div class="col-xs-4 img_events"><img src="<?php echo get_the_post_thumbnail_url($posts[$i]); ?>" class="img-responsive" style="border: 1px solid orange"></div>
+				if ($i > 0) $class = ''; else $class = ' active'; ?>
+				<div class="col-xs-12 item<?php echo $class; ?>" id="slide<?php echo $i; ?>">
+					<div class="col-xs-4 img_events"><img src="<?php echo get_the_post_thumbnail_url($posts[$i]); ?>" class="img-responsive"></div>
 					<div class="col-xs-8 text_events">
 						<h3><?php echo get_the_title($posts[$i]->ID); ?></h3>
 						<p><?php echo get_the_excerpt($posts[$i]); ?></p>
@@ -107,7 +108,7 @@
 			</div>
 			<?php } ?>
 			</div>
-			<div class="col-xs-1 arrow arrow_right"><img src="img/arrow_right.svg"></div>
+			<div class="col-xs-1 arrow arrow_right"><a class="right carousel-control" href="#carousel_events" role="button" data-slide="next"><img src="img/arrow_right.svg"></a></div>
 		</div>
 	</div>
 </div>
@@ -173,7 +174,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12">
-					<button type="click" class="btn btn-default btn_save_room" onclick="validateCallBackForm()">Отправить</button>
+					<button type="click" class="btn btn-default btn_visit_room">Отправить</button>
 				</div>
 			</div>
 			<div class="col-xs-12
@@ -279,46 +280,6 @@
 jQuery(document).ready(function() {
 	jQuery('.system-article').addClass('clearfix');
 });
-
-</script>
-
-<script defer>
-	var $body = document.querySelector('body')
-	var down = document.querySelector('#down')
-	var down1 = document.querySelector('#down1')
-
-	down.addEventListener('click',function(event)
-	{
-
-	 	var interval = setInterval(function()
-	 	{
-	 		 var id  = event.target.getAttribute('href'),
-	             top = document.querySelector(id).offsetTop
-
-	 		$body.scrollTop += 20
-
-	 		if ( $body.scrollTop > top )
-	 			clearInterval(interval)
-	 	}, 1)
-
-	 	event.preventDefault();
-	 })
-
-	down1.addEventListener('click',function(event)
-	{
-	 	var interval = setInterval(function()
-	 	{
-	 		 var id  = event.target.getAttribute('href'),
-	             top = document.querySelector(id).offsetTop
-
-	 		$body.scrollTop += 20
-
-	 		if ( $body.scrollTop > top )
-	 			clearInterval(interval)
-	 	}, 1)
-
-	 	event.preventDefault();
-	 })
 
 </script>
 </body>
