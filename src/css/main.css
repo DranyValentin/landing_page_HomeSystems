@@ -754,6 +754,11 @@ form .btn
 		padding-right: 48px;
 	}
 
+	.wr_events
+{
+	height: 312px;
+}
+
 	.img_events
 	{
 		display: none;
@@ -762,6 +767,7 @@ form .btn
 	.section_events h2
 	{
 		font-size: 28px;
+
 	}
 
 	.text_events
