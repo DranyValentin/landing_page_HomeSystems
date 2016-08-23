@@ -12,7 +12,6 @@
 	<script src="js/scrolldown.js" defer></script>
 	<script src="js/menu.js" defer></script>
 	<script src="js/modalform.js" defer></script>
-<!-- 	<script src="js/slider.js" defer></script> -->
 </head>
 <body>
 <div class="container-fluid">
@@ -99,11 +98,11 @@
 				// print_var($i);
 				if ($i > 0) $class = ''; else $class = ' active'; ?>
 				<div class="col-xs-12 item<?php echo $class; ?>" id="slide<?php echo $i; ?>">
-					<div class="col-xs-4 img_events"><img src="<?php echo get_the_post_thumbnail_url($posts[$i]); ?>" class="img-responsive"></div>
-					<div class="col-xs-8 text_events">
+					<div class="col-xs-12 col-sm-6 img_events"><img src="<?php echo get_the_post_thumbnail_url($posts[$i]); ?>" class="img-responsive"></div>
+					<div class="col-xs-12 col-sm-6 text_events">
 						<h3><?php echo get_the_title($posts[$i]->ID); ?></h3>
 						<p><?php echo get_the_excerpt($posts[$i]); ?></p>
-						<p><a href="<?php echo get_permalink($posts[$i]); ?>">подробнее...</a></p>
+						<p><a href="<?php echo get_permalink($posts[$i]); ?>" target="_blank">подробнее...</a></p>
 				</div>
 			</div>
 			<?php } ?>
@@ -155,22 +154,25 @@
 				</div>
 				<div class="col-xs-12 bl_select_system">
 					<p class="col-xs-6">Выберите систему</p>
-					<div class="col-xs-2 col-xs-push-1 sel3">
-						<select class="form-control select_system" name="system">
-							<option value="0">Домашняя автоматизация</option>
-								<option value="1">Управление освещением</option>
-								<option value="2">Климат-контроль</option>
-								<option value="3">Интернет и Wi-Fi</option>
-								<option value="4">Домашнее аудио</option>
-								<option value="5">Видео и мультимедиа</option>
-								<option value="6">Телевидение</option>
-								<option value="7">Системы Hi-End Stereo</option>
-								<option value="8">Видеонаблюдение</option>
-								<option value="9">Охранная сигнализация</option>
-								<option value="10">Отопление</option>
-								<option value="11">Энергоэффективность</option>
-								<option value="12">Современная электрика</option>
-						</select>
+					<div class="col-xs-6 sel3">
+						<div class="select_system_caption">Выбор не сделан
+							<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+						</div>
+						<ul class="select_system hidden">
+							<li><input id="system_1" class="checkbox_system" type="checkbox" value="Домашняя автоматизация"><label for="system_1">Домашняя автоматизация</label></li>
+							<li><input id="system_2" class="checkbox_system"type="checkbox" value="Управление освещением"><label for="system_2">Управление освещением</label></li>
+							<li><input id="system_3" class="checkbox_system"type="checkbox" value="Климат-контроль"><label for="system_3">Климат-контроль</label></li>
+							<li><input id="system_4" class="checkbox_system"type="checkbox" value="Интернет и Wi-Fi"><label for="system_4">Интернет и Wi-Fi</label></li>
+							<li><input id="system_5" class="checkbox_system"type="checkbox" value="Домашнее аудио"><label for="system_5">Домашнее аудио</label></li>
+							<li><input id="system_6" class="checkbox_system"type="checkbox" value="Видео и мультимедиа"><label for="system_6">Видео и мультимедиа</label></li>
+							<li><input id="system_7" class="checkbox_system"type="checkbox" value="Телевидение"><label for="system_7">Телевидение</label></li>
+							<li><input id="system_8" class="checkbox_system"type="checkbox" value="Системы Hi-End Stereo"><label for="system_8">Системы Hi-End Stereo</label></li>
+							<li><input id="system_9" class="checkbox_system"type="checkbox" value="Видеонаблюдение"><label for="system_9">Видеонаблюдение</label></li>
+							<li><input id="system_10" class="checkbox_system"type="checkbox" value="Охранная сигнализация"><label for="system_10">Охранная сигнализация</label></li>
+							<li><input id="system_11" class="checkbox_system"type="checkbox" value="Отопление"><label for="system_11">Отопление</label></li>
+							<li><input id="system_12" class="checkbox_system"type="checkbox" value="Энергоэффективность"><label for="system_12">Энергоэффективность</label></li>
+							<li><input id="system_13" class="checkbox_system"type="checkbox" value="Современная электрика"><label for="system_13">Современная электрика</label></li>
+						</ul>
 					</div>
 				</div>
 				<div class="col-xs-12">
@@ -276,11 +278,13 @@
 <!-- End Modal Form-->
 
 
-<script>
-jQuery(document).ready(function() {
-	jQuery('.system-article').addClass('clearfix');
-});
 
-</script>
 </body>
+<script>
+	var $articles = document.body.querySelectorAll('.system-article')
+
+	Array.from($articles).forEach(function($article){
+		$article.classList.add('clearfix')		
+	})
+</script>
 </html>
