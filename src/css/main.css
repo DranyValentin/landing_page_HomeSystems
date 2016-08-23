@@ -712,6 +712,16 @@ form .btn
 		margin: 0 auto 40px;
 	}
 
+	.wr_events
+	{
+		height:530px;
+	}
+
+	.text_events h3
+	{
+		margin-top: 10px;
+	}
+
 	.wr_sect_form,
 	.bl_name,
 	.bl_tel,
