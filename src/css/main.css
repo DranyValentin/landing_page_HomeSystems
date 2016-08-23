@@ -194,11 +194,21 @@ body
 
 .show_room
 {
-	font-size: 40px;	
 	color: #000;
 	text-align: center;
 	background-color: rgba(255,255,255,.9);
 	/*align-content: center;*/
+}
+
+.show_room h1
+{
+	font-size: 72px;
+	font-weight: 600;
+}
+
+.show_room p
+{
+	font-size: 34px;
 }
 /*End Section1*/
 
