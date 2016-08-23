@@ -702,9 +702,14 @@ form .btn
 		display: flex;
 	}
 
-	.show_room
+	.show_room h1
 	{
-		font-size: 32px
+		font-size: 66px;
+	}
+
+	.show_room p
+	{
+		font-size: 30px;
 	}
 
 	.section_events
@@ -755,7 +760,12 @@ form .btn
 		display: none;
 	}
 
-	.show_room
+	.show_room h1
+	{
+		font-size: 50px;
+	}
+
+	.show_room p
 	{
 		font-size: 24px;
 	}
