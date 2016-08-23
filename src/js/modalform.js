@@ -34,7 +34,7 @@ function AjaxFormRequest(result_id,formMain,url) {
         dataType: "html",
         data: jQuery("#"+formMain).serialize(),
         success: function(response) {
-		console.log(response)
+//		console.log(response)
             //document.getElementById(result_id).innerHTML = response;
         },
         error: function(response) {
@@ -60,6 +60,14 @@ function clearInput()
 	$email.value = ""
 	$dateNum.selectedIndex = 0
 	$dateMonth.selectedIndex = 0
+
+	Array.from($checkboxSystems).forEach(function($checkbox)
+  	{
+  		if ($checkbox.checked)
+  			$checkbox.checked = false
+   	})
+
+   	$selectSystem.firstChild.nodeValue = 'выбор не сделан'
 }
 
 var $button = document.querySelector('.btn_visit_room'),
@@ -67,7 +75,11 @@ var $button = document.querySelector('.btn_visit_room'),
 	$tel = document.querySelector('[placeholder="ТЕЛЕФОН"]'),
 	$email = document.querySelector('[placeholder="E-MAIL"]'),
 	$dateNum = document.querySelector('[name="day"]'),
-	$dateMonth = document.querySelector('[name="month"]')
+	$dateMonth = document.querySelector('[name="month"]'),
+	$selectSystem = document.querySelector('.select_system_caption'),
+	$checkboxSystems = document.querySelectorAll('.checkbox_system')
+
+
 
 $name.addEventListener('input', function(event)
 {
@@ -94,11 +106,26 @@ $dateMonth.addEventListener('click', function()
 	event.target.classList.remove('error_input')
 })
 
+$selectSystem.addEventListener('click', function()
+{
+	event.target.classList.remove('error_input')
+})
+
 $button.addEventListener('click', function(event)
 {
 	var regExpName = /[a-zA-Z]+/g
   	var regExpTel = /[0-9]+/g
   	var regExpEmail = /[a-z.A-z0-9]+@[a-zA-z]+.(com)?(net)?(ua)?(ru)?(co)?(\.)?(uk)?/g
+
+  	var check = false
+
+  	Array.from($checkboxSystems).forEach(function($checkbox)
+  	{
+  		if ($checkbox.checked){
+  			check = true
+  			return
+  		}
+  	})
 
   	if (!regExpName.test($name.value)) 
   	{
@@ -126,7 +153,12 @@ $button.addEventListener('click', function(event)
   	{
   		$dateMonth.classList.add('error_input')
   	}
-  	else
+  	else if ( !check )
+  	{
+  		console.log('Я здесь')
+  		$selectSystem.classList.add('error_input')
+  	}
+   	else
   	{
 		AjaxFormRequest('messegeResult', 'form', '../callback.php')
 		clearInput()
