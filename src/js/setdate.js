@@ -87,6 +87,7 @@
 
 // Open Select Systems
 	var $boxSystems = document.querySelector('.select_system_caption')
+	var $boxSystems_ = document.querySelector('.glyphicon-triangle-bottom')
 
 	$boxSystems.addEventListener('click', function(event)
 	{
@@ -97,28 +98,39 @@
 			listSystems.classList.remove('hidden')
 		else
 			listSystems.classList.add('hidden')
+
+		event.stopPropagation()
 	})
 
-// Change color text when move on checkbox
-// And
-// Add Choice System in Box_System_Caption
+	$boxSystems_.addEventListener('click', function(event)
+	{
+		var target = event.target
+		var listSystems = target.parentNode.nextElementSibling
+
+		if ( listSystems.classList.contains('hidden') )
+			listSystems.classList.remove('hidden')
+		else
+			listSystems.classList.add('hidden')
+
+		event.stopPropagation()
+	})
+// End Open Select Systems
+
+/* Change color text when move on checkbox
+*  And
+*  Add Choice System in Box_System_Caption
+*/
 	var $checkboxSystems = document.querySelectorAll('.checkbox_system')
-	console.log($checkboxSystems)
 	var memSystemCaption = $boxSystems.textContent,
-		textSystemCaption,
-		currentSystemCaption,
-		countCheckedSystem = 0,
-		keyText = true
+		countCheckedSystem = 0
 
 	var	arrCaptions = []
 
 	Array.from($checkboxSystems).forEach(function($checkboxSystem)
 	{
-		console.log($checkboxSystem)
-
+		// Change Color Text
 		$checkboxSystem.addEventListener('mouseover', function(event)
 		{
-			console.log(event.target.nextElementSibling)
 			event.target.nextElementSibling.classList.add('text_orange')
 		})
 
@@ -126,13 +138,12 @@
 		{
 			event.target.nextElementSibling.classList.remove('text_orange')
 		})
+		// End Change Color Text
 
-		$checkboxSystem.addEventListener('click', function()
+		// Choice System in Box_System_Caption
+		$checkboxSystem.addEventListener('click', function(event)
 		{
 			var target = event.target
-			
-			console.log(memSystemCaption)
-			console.log(target.value)
 
 			if ( target.checked )
 			{
@@ -141,11 +152,8 @@
 			}
 			else
 			{	
-				console.log("Нет выбора")
 				for ( var i = 0; i < arrCaptions.length; i++)
 				{
-					console.log(arrCaptions[i])
-					console.log(target.value)
 					if ( arrCaptions[i] == target.value )
 					{
 						arrCaptions.splice(i,1)
@@ -155,27 +163,36 @@
 				countCheckedSystem--
 			}
 
-			console.log(arrCaptions)
-
 			if ( arrCaptions.length > 1 )
 			{
-				$boxSystems.textContent = arrCaptions[0] + ' ...'	
+				$boxSystems.firstChild.nodeValue = arrCaptions[0] + ' ...'	
 			}
-			
-			if ( arrCaptions.length == 1 )
+			else if ( arrCaptions.length == 1 )
 			{
-				$boxSystems.textContent = arrCaptions[0]
+				$boxSystems.firstChild.nodeValue = arrCaptions[0]
+			}
+			else if ( arrCaptions.length == 0 )
+			{
+				$boxSystems.firstChild.nodeValue = memSystemCaption
 			}
 
-			if ( arrCaptions.length == 0 )
-			{
-				$boxSystems.textContent = memSystemCaption
-			}
+			event.stopPropagation()
 		})
-
+		// End Choice System in Box_System_Caption
 	})
 
+	var $body = document.querySelector('body')
+	var $selectSystem = document.querySelector('.select_system')
 
+	$selectSystem.addEventListener('click', function(event)
+	{
+		event.stopPropagation()
+	})
+
+	$body.addEventListener('click', function(event)
+	{
+		$selectSystem.classList.add('hidden')
+	})
 	
 
 })()
